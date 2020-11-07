@@ -1,0 +1,23 @@
+#Build appa
+docker build -t myapp .
+
+docker images
+docker history "myapp"
+
+docker run -d -p 8888:8888 myapp
+docker ps
+docker logs "name of app"
+docker push gcr.io/"name-project"/"name-images"
+
+#Connect Inside
+docker exec -it "name" /bin/bash
+it = interactive terminal
+
+docker stop
+docker start
+#Remove container
+docker rm
+
+#Tag upload
+docker tag myapp gcr.io/"name-project"/"name-images"
+docker push gcr.io/"name-project"/"name-images"

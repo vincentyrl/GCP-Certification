@@ -1,0 +1,2 @@
+#Conect db via Shell
+gcloud sql connect "instances" --user=root

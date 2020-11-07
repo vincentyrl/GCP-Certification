@@ -1,0 +1,46 @@
+gcloud container clusters get-credentials your-first-cluster-1 --zone=southamerica-east1-a
+gcloud container clusters list
+kubectl get nodes
+kubectl get pods
+kubectl get services
+
+#Delete pod
+kubectl delete pod "name"
+
+kubectl run nginx --image=nginx
+kubectl expose deployment nginx port=80 --type=LoadBalancer
+
+#source
+source <(kubectl completion bash)
+
+#Pod is a kubernetes object
+
+#Create with yaml
+kubectl apply -f nginx.yaml
+kubectl apply -f "deployment" --record
+kubectl delete -f nginx.yaml
+
+kubectl describe deployment myapp-deployment
+kubectl delete pods "namepod"
+a
+####Revisar untainted y tainted#####
+
+kubectl rollout status deployment.v1.apps/myapp-deployment
+kubectl rollout history deployment.v1.apps/myapp-deployment
+kubectl rollout undo deployment.v1.apps/myapp-deployment
+
+#logging
+kubectl get events
+kubectl get pods
+kubectl describe pod "name-pod"
+kubectl logs pod/"name-pods"
+kubectl logs --selector run=nginx
+
+#Volume claims PVC
+kubectl get persistentvolumeclaim
+
+#Shell session
+kubectl exec -it "name" -- sh
+
+Minuto
+7:20

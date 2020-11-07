@@ -1,0 +1,26 @@
+#Set Project
+gcloud projects list (List projects)
+gcloud config set project “name-project”
+
+gcloud config list (List all properties in a configuration)
+gcloud config configurations list (List all configurations)
+
+#Make New
+gcloud config configurations create "newconfig"
+
+#Switch To
+gcloud config configurations activate "newconfig"
+
+#If you want, when opened Cloud Shell set permanently a configuration you must
+edit .bashrc in home.
+
+#Set zone
+gcloud config set compute/zone "zone"
+
+#List
+gcloud config list
+
+#List non-active
+gcloud --configuration=newconfig config list
+or
+gcloud configurations describe "newconfig"

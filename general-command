@@ -1,0 +1,5 @@
+curl ifconfig,me (obtain IP public)
+
+
+#Explore Metadata
+curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/

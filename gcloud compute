@@ -1,0 +1,47 @@
+#Instances
+gcloud compute instances list
+gcloud compute instances create myvm
+gcloud compute instances delete myvm
+
+#Instances template
+Instances template cannot be change
+
+gcloud compute instances create myvm -h (obtain basic information)
+or
+gcloud compute instances create myvm --help (obtain details information)
+
+#When create a instances the default machine type is n1-standard-1
+#This command show machine types and filter by name and show all machine contain word f1 in NAME
+gcloud compute machine-types list --filter=name:f1 (You dont need "" in this example, but if you want use other operator or conditional)
+
+#Example
+gcloud compute machine-types list --filter="NAME:f1-micro AND ZONE~southamerica"
+
+#The ~ show all zone contain word "southamerica" if we used : :southamerica show exactly contain word
+#All region zone machine types is case sensitive
+
+#Create VM with specified machine type
+gcloud compute instances create --machine-type=f1-micro
+
+#View zones
+gcloud compute zones list
+
+#View regions
+gcloud compute regions list
+
+#Set zone
+gcloud config set compute/zone southamerica-east1-a
+#Set region
+gcloud config set compute/region southamerica-east1
+
+#Add Tags to Instances
+gcloud compute instances add-tags #name-instances" --tags "name-tag" --zone "zone"
+
+#Create SSH Key and connect
+gcloud compute ssh "namevm"
+
+#Set service account using read write storage
+gcloud compute instances set-service-account --scopes=storage-rw
+
+#Create VM with tags and startup-script
+gcloud compute instances create "my-vm" --zone="zone" --machine-type="" --tags="tags" --metadata-from-file startup-script="location"

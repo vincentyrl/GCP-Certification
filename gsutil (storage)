@@ -1,0 +1,13 @@
+#Buckets
+#Name of bucket is unique-global
+gsutil ls
+
+View inside bucket
+gsutil ls gs://”name of bucket”
+gsutil ls gs://”name of bucket”/** (Inside of folder)
+
+gsutil mb (make bucket)
+gsutil mb -l SOUTHAMERICA-EAST1 gs://"nameofbucket" (create bucket in specified region)
+
+#Copy to Bucket
+gsutil cp "file" gs://"name-bucket"

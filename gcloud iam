@@ -1,0 +1,23 @@
+#Add member to iam with primitive roles
+gcloud projects add-iam-policy-binding "project" --member=user:"" --role=roles/editor
+
+#remove member
+gcloud projects remove-iam-policy-binding "project" --member=user:"" --role=roles/editor
+
+#get or list member
+gcloud projects get-iam-policy "project"
+
+#Create service-accounts
+gcloud iam service-accounts create "name"
+
+#Create a custom role
+gcloud iam create roles "name" --project=""
+
+#Using a custom role and assing
+gcloud project add-iam-policy-binding "project" --member=user:"user" --role="project/role"
+
+#Describe roles
+gcloud iam roles describe "name" --project=""
+
+#Remove permissions of custom roles
+gcloud iam roles update "name" --project="" --remove-permissions="name"

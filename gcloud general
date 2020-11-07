@@ -24,3 +24,5 @@ gcloud config list
 gcloud --configuration=newconfig config list
 or
 gcloud configurations describe "newconfig"
+
+curl ifconfig,me (obtain IP public)

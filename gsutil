@@ -11,3 +11,6 @@ gsutil mb -l SOUTHAMERICA-EAST1 gs://"nameofbucket" (create bucket in specified 
 
 #Copy to Bucket
 gsutil cp "file" gs://"name-bucket"
+
+#Versioning
+gsutil versiong set on gs://"nameofbucket"

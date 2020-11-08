@@ -45,3 +45,6 @@ gcloud compute instances set-service-account --scopes=storage-rw
 
 #Create VM with tags and startup-script
 gcloud compute instances create "my-vm" --zone="zone" --machine-type="" --tags="tags" --metadata-from-file startup-script="location"
+
+#Resize cluster
+gcloud container clusters resize "cluster" --zone="" --num-nodes=""

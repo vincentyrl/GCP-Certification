@@ -15,15 +15,21 @@ gsutil cp "file" gs://"name-bucket"
 #Versioning
 gsutil versiong set on gs://"nameofbucket"
 
-#View metadata of a object
-gsutil stat gs://"nameofbucket"/"nameofobject"
-
-#information of a Bucket
+#####Information of a Bucket#########
 #view storage class of a Bucket
 gsutil defstorageclass get gs://"nameofbucket"
 
 #change storage class of a Bucket
 gsutil defstorageclass set "storage-class" gs://"nameofbucket"
 
-#Change storage class of a Bucket
-gsutil
+#####
+
+#Bucket
+#View metadata or info about object
+gsutil stat gs://"nameofbucket"/"nameofobject"
+
+#Change storage class of a object
+gsutil rewrite -s "storage-class" gs://"nameofbucket"/"nameofobject"
+
+#####Search####
+How i can change storage class in ¿folder??

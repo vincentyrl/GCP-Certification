@@ -33,3 +33,5 @@ gsutil rewrite -s "storage-class" gs://"nameofbucket"/"nameofobject"
 
 #####Search####
 How i can change storage class in ¿folder??
+
+fsd

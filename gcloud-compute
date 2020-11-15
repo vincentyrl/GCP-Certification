@@ -48,3 +48,8 @@ gcloud compute instances create "my-vm" --zone="zone" --machine-type="" --tags="
 
 #Resize cluster
 gcloud container clusters resize "cluster" --zone="" --num-nodes=""
+
+#startup script
+startup-script
+#Using startupt-script in Bucket
+startup-sctript-url gs://"bucket"

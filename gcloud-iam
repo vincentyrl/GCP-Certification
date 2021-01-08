@@ -13,6 +13,9 @@ gcloud iam service-accounts create "name"
 #Create a custom role
 gcloud iam create roles "name" --project=""
 
+#Create custom role with permissions
+gcloud iam roles create --project="" --permissions=""
+
 #Using a custom role and assing
 gcloud project add-iam-policy-binding "project" --member=user:"user" --role="project/role"
 

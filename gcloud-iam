@@ -20,7 +20,10 @@ gcloud iam roles create --project="" --permissions=""
 gcloud project add-iam-policy-binding "project" --member=user:"user" --role="project/role"
 
 #Describe roles
-gcloud iam roles describe "name" --project=""
+gcloud iam roles describe "name" --project="" <- Is optional
 
 #Remove permissions of custom roles
 gcloud iam roles update "name" --project="" --remove-permissions="name"
+
+#filter
+gcloud iam roles list --filter="network"

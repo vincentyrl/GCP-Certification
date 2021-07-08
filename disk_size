@@ -1,0 +1,10 @@
+#paquete
+yum install cloud-utils-growpart
+
+gcloud compute disks resize "instances" --zone= --size 15GB
+growpart /dev/sda 1
+xfs_growfs /dev/sda1
+
+
+
+mkfs.xfs
